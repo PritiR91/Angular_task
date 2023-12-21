@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "company": "Wipro",
+      "username": "John",
+      "password": "John@1234",
+      "select": false,
+      "id": 1
+    },
+    {
+      "company": "Infosys",
+      "username": "Geetha",
+      "password": "Geetha%@123%",
+      "select": false,
+      "id": 2
+    },
+    {
+      "company": "Cbil",
+      "username": "Kishor",
+      "password": "Kishor$%^90",
+      "select": false,
+      "id": 3
+    }
+  ],
+  "deletedUser": [
+    
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="container border shadow mt-5">
+    <a (click)="logout()" style="font-weight: 700;color: black;display:inline-block;cursor: pointer;">Logout</a>
+   <button id="deleteBtn" class="btn-primary" style="float:right;margin-top: 10px;" (click)="deleteRecord()">Delete</button>
+    <div class="row p-5">
+        <div data-name="UserData">
+        <table class="table table-dark text-center">
+            <thead>
+              <tr>
+                <th scope="col" data-name="tableHead"><input type="checkbox" class="form-check-input" [value]="-1" [(ngModel)]="allSelector" (change)="onChangeUserlist($event)"/></th>
+                <th scope="col" data-name="tableHead" *ngFor="let col of columns ">
+                  <a (click)="sortedColumn=col" style="cursor: pointer;">{{col|titlecase}}<span class="material-symbols-outlined fs-6"> swap_vert </span></a>
+                </th>
+                <!-- <th scope="col" data-name="tableHead">Action</th> -->
+              </tr>
+            </thead>
+            <tbody #wrapper>
+              <tr class="table-primary" *ngFor="let user of usersList|sort:sortedColumn;let i=index;" draggable="true" (dragstart)="dragit($event)" (dragover)="dragover($event)">
+                <td data-name="tableBody"><input type="checkbox" [value]="user.id" [checked]="user.select" (change)="onChangeUserlist($event)"  /></td>
+                <td data-name="tableBody">{{user.company}}</td>
+                <td data-name="tableBody">{{user.username}}</td>
+                <td data-name="tableBody">{{user.password}}</td>
+                <td data-name="tableBody">{{user.id}}</td>
+                <!-- <td data-name="tableBody">
+                    <span class="material-symbols-outlined" style="cursor: pointer;" (click)="delete(user,i)">delete</span>
+                </td> -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>

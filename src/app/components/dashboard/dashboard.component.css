@@ -1,0 +1,12 @@
+[data-name="UserData"] table.table.table-dark th[data-name="tableHead"] {
+    background-color: var(--primary-color);
+}
+[data-name="UserData"] table.table.table-dark th{
+    border: var(--primary-color);
+}
+[data-name="UserData"] table.table.table-dark{
+    border: var(--primary-color);
+}
+[data-name="UserData"] table.table.table-dark td[data-name="tableBody"] {
+    background-color: var(--secondary-color);
+}
